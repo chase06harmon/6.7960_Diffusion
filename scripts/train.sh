@@ -1,7 +1,7 @@
 CUDA_VISIBLE_DEVICES=1,2 python -m torch.distributed.launch --nproc_per_node=2 --master_port=12231 --use_env run_train.py \
 --diff_steps 2000 \
 --lr 0.0001 \
---learning_steps 50000 \
+--learning_steps 20000 \
 --save_interval 5000 \
 --seed 102 \
 --noise_schedule sqrt \
