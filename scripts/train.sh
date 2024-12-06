@@ -8,7 +8,7 @@ CUDA_VISIBLE_DEVICES=1,2 python -m torch.distributed.launch --nproc_per_node=4 -
 --hidden_dim 128 \
 --bsz 425 \
 --microbatch 425 \
---dataset qqp \
+--dataset EnglishSlang \
 --data_dir {path-to-datasets} \
 --learned_mean_embed True \
 --denoise True \
