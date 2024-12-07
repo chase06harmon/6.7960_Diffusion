@@ -231,7 +231,7 @@ def get_corpus(data_args, seq_len, split='train', loaded_vocab=None):
         path = f'{data_args.data_dir}/valid.jsonl'
     elif split == 'test':
         print('### Loading form the TEST set...')
-        path = f'{data_args.data_dir}/test.jsonl'
+        path = f'{data_args.data_dir}/valid.jsonl'
     else:
         assert False, "invalid split for dataset"
 
