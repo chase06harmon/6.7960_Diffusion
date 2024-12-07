@@ -65,6 +65,7 @@ def main():
     )
 
     model.load_state_dict(
+        print(args.model_path)
         dist_util.load_state_dict(args.model_path, False, "model", map_location="cpu")
     )
 
