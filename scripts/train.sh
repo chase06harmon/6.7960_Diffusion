@@ -9,7 +9,7 @@ CUDA_VISIBLE_DEVICES=1,2 python -m torch.distributed.launch --nproc_per_node=4 -
 --bsz 425 \
 --microbatch 425 \
 --dataset EnglishSlang \
---data_dir /nobackup/users/djtufto/6.7960_Diffusion/datasets/EnglishSlang \
+--data_dir ./datasets/EnglishSlang \
 --learned_mean_embed True \
 --denoise True \
 --vocab bert \
