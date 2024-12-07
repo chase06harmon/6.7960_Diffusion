@@ -38,6 +38,8 @@ def setup_dist():
     dist.init_process_group(backend=backend, init_method="env://")
 
     if th.cuda.is_available():  # This clears remaining caches in GPU 0
+        print(dev())
+        print(th.cuda.device_count())
         th.cuda.set_device(dev())
         th.cuda.empty_cache()
 
@@ -47,7 +49,7 @@ def dev():
     Get the device to use for torch.distributed.
     """
     if th.cuda.is_available():
-        return th.device(f"cuda:{os.environ['LOCAL_RANK']}")
+        return th.device(f"cuda:0") # supercloud change...
     return th.device("cpu")
 
 

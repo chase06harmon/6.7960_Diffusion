@@ -7,9 +7,11 @@ psutil
 PyYAML
 setuptools
 spacy
-torch>=2.0
+torch
 torchmetrics
 tqdm
-transformers==4.47.0
+transformers
 wandb
 datasets
+numpy==1.24.1
+

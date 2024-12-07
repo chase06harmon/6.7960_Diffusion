@@ -1,0 +1,31 @@
+starting import
+1.24.1
+succesfully imported
+STARTING TRAINING
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-18:33:40  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-18:33:40 --dataset EnglishSlang --data_dir ../datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 425 --microbatch 425 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-18:33:40 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-18:33:40  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-18:33:40 --dataset EnglishSlang --data_dir ../datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 425 --microbatch 425 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-18:33:40 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 8, in <module>
+    from diffuseq.utils import dist_util, logger
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/utils/dist_util.py", line 9, in <module>
+    import blobfile as bf
+ModuleNotFoundError: No module named 'blobfile'
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 8, in <module>
+    from diffuseq.utils import dist_util, logger
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/utils/dist_util.py", line 9, in <module>
+    import blobfile as bf
+ModuleNotFoundError: No module named 'blobfile'

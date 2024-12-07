@@ -1,0 +1,141 @@
+starting import
+1.24.1
+succesfully imported
+STARTING TRAINING
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-19:06:29  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-19:06:29 --dataset EnglishSlang --data_dir ../datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 425 --microbatch 425 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-19:06:29 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-19:06:29  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-19:06:29 --dataset EnglishSlang --data_dir ../datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 425 --microbatch 425 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-19:06:29 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+2024-12-06 19:06:43.818129: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 19:06:43.818129: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 19:06:44.991293: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 19:06:44.991302: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 19:06:49.305501: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 19:06:49.305504: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 19:06:49.305785: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 19:06:49.305796: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 19:06:49.305804: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2024-12-06 19:06:49.305815: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Logging to diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-19:06:29
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 117, in <module>
+    main()
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 37, in main
+    dist_util.setup_dist()
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/utils/dist_util.py", line 41, in setup_dist
+### Creating data loader...
+    th.cuda.set_device(dev())
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/cuda/__init__.py", line 326, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Traceback (most recent call last):
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7ff85fc64250>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /bert-base-uncased/resolve/main/config.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff85fc64250>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1376, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1296, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 277, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 300, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /bert-base-uncased/resolve/main/config.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff85fc64250>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: bde8fc5b-b0a0-462e-bb44-763886916aff)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 969, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1487, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 117, in <module>
+    main()
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 41, in main
+    tokenizer = load_tokenizer(args)
+  File "/home/gridsan/charmon/DiffuSeq/basic_utils.py", line 97, in load_tokenizer
+    tokenizer = myTokenizer(args)
+  File "/home/gridsan/charmon/DiffuSeq/basic_utils.py", line 20, in __init__
+    tokenizer = AutoTokenizer.from_pretrained(args.config_name)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/transformers/models/auto/tokenization_auto.py", line 878, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/transformers/models/auto/configuration_auto.py", line 1021, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/transformers/configuration_utils.py", line 590, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/transformers/configuration_utils.py", line 649, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/gridsan/charmon/.local/lib/python3.9/site-packages/transformers/utils/hub.py", line 446, in cached_file
+    raise EnvironmentError(
+OSError: We couldn't connect to 'https://huggingface.co' to load this file, couldn't find it in the cached files and it looks like bert-base-uncased is not the path to a directory containing a file named config.json.
+Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
