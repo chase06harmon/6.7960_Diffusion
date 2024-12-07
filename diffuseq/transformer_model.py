@@ -43,7 +43,7 @@ class TransformerNetModel(nn.Module):
         super().__init__()
 
         if config is None:
-            config = AutoConfig.from_pretrained(config_name)
+            config = AutoConfig.from_pretrained("./tokenizers/bert-base-uncased")
             config.hidden_dropout_prob = dropout
 
         self.input_dims = input_dims

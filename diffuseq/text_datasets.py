@@ -9,6 +9,7 @@ import json
 import psutil
 import datasets
 from datasets import Dataset as Dataset2
+import os
 
 def load_data_text(
     batch_size, 
@@ -235,6 +236,7 @@ def get_corpus(data_args, seq_len, split='train', loaded_vocab=None):
     else:
         assert False, "invalid split for dataset"
 
+    print("Current Working Directory:", os.getcwd())
     with open(path, 'r') as f_reader:
         for row in f_reader:
             sentence_lst['src'].append(json.loads(row)['src'].strip())

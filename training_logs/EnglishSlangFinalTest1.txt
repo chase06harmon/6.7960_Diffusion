@@ -1,0 +1,234 @@
+starting import
+1.24.1
+succesfully imported
+STARTING TRAINING
+GPU-e2b17acf-744a-7c48-301f-7190e389cb37,GPU-a4d9ce0b-deba-7bd0-34ab-2371dc8f02ca
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25 --dataset EnglishSlang --data_dir ./datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 300 --microbatch 300 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25 --dataset EnglishSlang --data_dir ./datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 300 --microbatch 300 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+2024-12-06 22:14:46.878235: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 22:14:46.878238: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 22:14:48.343476: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 22:14:48.343520: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 22:14:53.224942: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 22:14:53.224952: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 22:14:53.225636: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 22:14:53.225641: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 22:14:53.225696: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2024-12-06 22:14:53.225730: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+cuda:0
+2
+Logging to diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25
+### Creating data loader...
+cuda:1
+2
+Logging to diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25
+### Creating data loader...
+initializing the random embeddings Embedding(30522, 128)
+############################## 
+Loading text data...
+############################## 
+Loading dataset EnglishSlang from ./datasets/EnglishSlang...
+### Loading form the TRAIN set...
+Current Working Directory: /home/gridsan/charmon/DiffuSeq
+### Data samples...
+ ['Write a sentence', 'Write a sentence'] ["Man dude is just flossin'.", 'She is dick whipped.']
+RAM used: 833.78 MB
+Dataset({
+    features: ['src', 'trg'],
+    num_rows: 22072
+})
+RAM used: 840.82 MB
+Running tokenizer on dataset (num_proc=4):   0%|          | 0/22072 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=4):   5%|▍         | 1000/22072 [00:00<00:04, 4880.50 examples/s]Running tokenizer on dataset (num_proc=4):  41%|████      | 9000/22072 [00:00<00:00, 33996.70 examples/s]Running tokenizer on dataset (num_proc=4):  77%|███████▋  | 17000/22072 [00:00<00:00, 48298.02 examples/s]Running tokenizer on dataset (num_proc=4): 100%|██████████| 22072/22072 [00:00<00:00, 36954.83 examples/s]
+### tokenized_datasets Dataset({
+    features: ['input_id_x', 'input_id_y'],
+    num_rows: 22072
+})
+### tokenized_datasets...example [101, 4339, 1037, 6251, 102]
+RAM used: 852.34 MB
+merge and mask:   0%|          | 0/22072 [00:00<?, ? examples/s]reload the random embeddings Embedding(30522, 128)
+############################## 
+Loading text data...
+############################## 
+Loading dataset EnglishSlang from ./datasets/EnglishSlang...
+### Loading form the TRAIN set...
+Current Working Directory: /home/gridsan/charmon/DiffuSeq
+### Data samples...
+ ['Write a sentence', 'Write a sentence'] ["Man dude is just flossin'.", 'She is dick whipped.']
+RAM used: 832.87 MB
+Dataset({
+    features: ['src', 'trg'],
+    num_rows: 22072
+})
+RAM used: 848.16 MB
+Running tokenizer on dataset (num_proc=4):   0%|          | 0/22072 [00:00<?, ? examples/s]merge and mask:   5%|▍         | 1000/22072 [00:00<00:03, 6784.05 examples/s]Running tokenizer on dataset (num_proc=4):   5%|▍         | 1000/22072 [00:00<00:02, 7324.41 examples/s]merge and mask:  36%|███▌      | 8000/22072 [00:00<00:00, 35097.71 examples/s]Running tokenizer on dataset (num_proc=4):  41%|████      | 9000/22072 [00:00<00:00, 41499.01 examples/s]merge and mask:  72%|███████▏  | 16000/22072 [00:00<00:00, 47118.25 examples/s]Running tokenizer on dataset (num_proc=4):  77%|███████▋  | 17000/22072 [00:00<00:00, 53783.25 examples/s]merge and mask: 100%|██████████| 22072/22072 [00:00<00:00, 51516.13 examples/s]merge and mask: 100%|██████████| 22072/22072 [00:00<00:00, 44430.31 examples/s]
+RAM used: 866.04 MB
+padding:   0%|          | 0/22072 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=4): 100%|██████████| 22072/22072 [00:00<00:00, 41780.34 examples/s]
+padding:  14%|█▎        | 3000/22072 [00:00<00:01, 17461.11 examples/s]### tokenized_datasets Dataset({
+    features: ['input_id_x', 'input_id_y'],
+    num_rows: 22072
+})
+### tokenized_datasets...example [101, 4339, 1037, 6251, 102]
+RAM used: 863.50 MB
+merge and mask:   0%|          | 0/22072 [00:00<?, ? examples/s]merge and mask:  36%|███▌      | 8000/22072 [00:00<00:00, 64942.51 examples/s]padding:  32%|███▏      | 7000/22072 [00:00<00:00, 20657.65 examples/s]merge and mask:  72%|███████▏  | 16000/22072 [00:00<00:00, 65628.87 examples/s]padding:  50%|████▉     | 11000/22072 [00:00<00:00, 21669.77 examples/s]merge and mask: 100%|██████████| 22072/22072 [00:00<00:00, 65940.95 examples/s]
+RAM used: 877.19 MB
+padding:   0%|          | 0/22072 [00:00<?, ? examples/s]padding:  68%|██████▊   | 15000/22072 [00:00<00:00, 22453.30 examples/s]padding:  18%|█▊        | 4000/22072 [00:00<00:00, 23214.70 examples/s]padding:  86%|████████▌ | 19000/22072 [00:00<00:00, 22895.83 examples/s]padding:  36%|███▌      | 8000/22072 [00:00<00:00, 23250.77 examples/s]padding: 100%|█████████▉| 22000/22072 [00:00<00:00, 22442.22 examples/s]padding: 100%|██████████| 22072/22072 [00:01<00:00, 21954.28 examples/s]
+Dataset({
+    features: ['input_id_x', 'input_id_y', 'input_ids', 'input_mask'],
+    num_rows: 22072
+}) padded dataset
+RAM used: 940.74 MB
+RAM used: 940.74 MB
+padding:  54%|█████▍    | 12000/22072 [00:00<00:00, 23146.58 examples/s]padding:  68%|██████▊   | 15000/22072 [00:00<00:00, 21923.64 examples/s]padding:  86%|████████▌ | 19000/22072 [00:00<00:00, 22073.51 examples/s]padding: 100%|█████████▉| 22000/22072 [00:00<00:00, 21645.35 examples/s]padding: 100%|██████████| 22072/22072 [00:01<00:00, 22069.54 examples/s]
+Dataset({
+    features: ['input_id_x', 'input_id_y', 'input_ids', 'input_mask'],
+    num_rows: 22072
+}) padded dataset
+RAM used: 951.77 MB
+RAM used: 951.77 MB
+############################## 
+Loading text data...
+############################## 
+Loading dataset EnglishSlang from ./datasets/EnglishSlang...
+### Loading form the VALID set...
+Current Working Directory: /home/gridsan/charmon/DiffuSeq
+### Data samples...
+ ['Write a sentence', 'Write a sentence'] ['O, kill me too!', "Hands off!  She's my ruca."]
+RAM used: 940.62 MB
+Dataset({
+    features: ['src', 'trg'],
+    num_rows: 5518
+})
+RAM used: 940.62 MB
+Running tokenizer on dataset (num_proc=4):   0%|          | 0/5518 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=4):  18%|█▊        | 1000/5518 [00:00<00:00, 8126.61 examples/s]############################## 
+Loading text data...
+############################## 
+Loading dataset EnglishSlang from ./datasets/EnglishSlang...
+### Loading form the VALID set...
+Current Working Directory: /home/gridsan/charmon/DiffuSeq
+### Data samples...
+ ['Write a sentence', 'Write a sentence'] ['O, kill me too!', "Hands off!  She's my ruca."]
+RAM used: 952.62 MB
+Dataset({
+    features: ['src', 'trg'],
+    num_rows: 5518
+})
+RAM used: 952.62 MB
+Running tokenizer on dataset (num_proc=4): 100%|██████████| 5518/5518 [00:00<00:00, 22041.29 examples/s]
+### tokenized_datasets Dataset({
+    features: ['input_id_x', 'input_id_y'],
+    num_rows: 5518
+})
+### tokenized_datasets...example [101, 4339, 1037, 6251, 102]
+RAM used: 944.70 MB
+merge and mask:   0%|          | 0/5518 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=4):   0%|          | 0/5518 [00:00<?, ? examples/s]merge and mask: 100%|██████████| 5518/5518 [00:00<00:00, 58073.99 examples/s]
+RAM used: 944.70 MB
+padding:   0%|          | 0/5518 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=4):  18%|█▊        | 1000/5518 [00:00<00:00, 8248.26 examples/s]padding:  54%|█████▍    | 3000/5518 [00:00<00:00, 20003.99 examples/s]Running tokenizer on dataset (num_proc=4): 100%|██████████| 5518/5518 [00:00<00:00, 22354.86 examples/s]
+### tokenized_datasets Dataset({
+    features: ['input_id_x', 'input_id_y'],
+    num_rows: 5518
+})
+### tokenized_datasets...example [101, 4339, 1037, 6251, 102]
+RAM used: 956.71 MB
+merge and mask:   0%|          | 0/5518 [00:00<?, ? examples/s]padding: 100%|██████████| 5518/5518 [00:00<00:00, 20636.83 examples/s]padding: 100%|██████████| 5518/5518 [00:00<00:00, 20413.35 examples/s]
+Dataset({
+    features: ['input_id_x', 'input_id_y', 'input_ids', 'input_mask'],
+    num_rows: 5518
+}) padded dataset
+RAM used: 946.70 MB
+RAM used: 946.70 MB
+############################## size of vocab 30522
+### Creating model and diffusion...
+merge and mask: 100%|██████████| 5518/5518 [00:00<00:00, 63127.46 examples/s]
+RAM used: 956.71 MB
+padding:   0%|          | 0/5518 [00:00<?, ? examples/s]padding:  72%|███████▏  | 4000/5518 [00:00<00:00, 22388.22 examples/s]padding: 100%|██████████| 5518/5518 [00:00<00:00, 21906.81 examples/s]
+Dataset({
+    features: ['input_id_x', 'input_id_y', 'input_ids', 'input_mask'],
+    num_rows: 5518
+}) padded dataset
+RAM used: 958.71 MB
+RAM used: 958.71 MB
+############################## size of vocab 30522
+### Creating model and diffusion...
+### The parameter count is 91225402
+### Saving the hyperparameters to diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25/training_args.json
+### Training...
+### The parameter count is 91225402
+### Saving the hyperparameters to diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-22:14:25/training_args.json
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Tracking run with wandb version 0.19.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+### Training...
+cuda:1
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 117, in <module>
+cuda:0
+    main()
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 94, in main
+    TrainLoop(
+  File "/home/gridsan/charmon/DiffuSeq/train_util.py", line 188, in run_loop
+    self.run_step(batch, cond)
+  File "/home/gridsan/charmon/DiffuSeq/train_util.py", line 213, in run_step
+    self.forward_backward(batch, cond)
+  File "/home/gridsan/charmon/DiffuSeq/train_util.py", line 277, in forward_backward
+    losses = compute_losses()
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 784, in training_losses
+    return super().training_losses(self._wrap_model(model), *args, **kwargs)
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 190, in training_losses
+    return self.training_losses_seq2seq(model, *args, **kwargs)
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 666, in training_losses_seq2seq
+    terms["nll"] = self._token_discrete_loss(model_out_x_start, get_logits, input_ids_x, mask=input_ids_mask, truncate=True, t=t) # x_0->model_out_x_start
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 594, in _token_discrete_loss
+    decoder_nll = loss_fct(logits.view(-1, logits.size(-1)), input_ids.view(-1)).view(input_ids.shape)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/nn/functional.py", line 3026, in cross_entropy
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 117, in <module>
+    main()
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.18 GiB (GPU 1; 31.74 GiB total capacity; 29.01 GiB already allocated; 1.06 GiB free; 29.53 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 94, in main
+    TrainLoop(
+  File "/home/gridsan/charmon/DiffuSeq/train_util.py", line 188, in run_loop
+    self.run_step(batch, cond)
+  File "/home/gridsan/charmon/DiffuSeq/train_util.py", line 213, in run_step
+    self.forward_backward(batch, cond)
+  File "/home/gridsan/charmon/DiffuSeq/train_util.py", line 277, in forward_backward
+    losses = compute_losses()
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 784, in training_losses
+    return super().training_losses(self._wrap_model(model), *args, **kwargs)
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 190, in training_losses
+    return self.training_losses_seq2seq(model, *args, **kwargs)
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 666, in training_losses_seq2seq
+    terms["nll"] = self._token_discrete_loss(model_out_x_start, get_logits, input_ids_x, mask=input_ids_mask, truncate=True, t=t) # x_0->model_out_x_start
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/gaussian_diffusion.py", line 594, in _token_discrete_loss
+    decoder_nll = loss_fct(logits.view(-1, logits.size(-1)), input_ids.view(-1)).view(input_ids.shape)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/nn/functional.py", line 3026, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.18 GiB (GPU 0; 31.74 GiB total capacity; 29.01 GiB already allocated; 1.06 GiB free; 29.53 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[1;34mwandb[0m:
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /home/gridsan/charmon/DiffuSeq/wandb/offline-run-20241206_221512-q2jan03b[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20241206_221512-q2jan03b/logs[0m

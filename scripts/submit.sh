@@ -2,7 +2,7 @@
 
 #SBATCH -c 16
 #SBATCH --gres=gpu:volta:2
-#SBATCH -o ../training_logs/EnglishSlangTest4.txt
+#SBATCH -o ../training_logs/EnglishSlangFinalTest1.txt
 
 # Loading Modules
 source /etc/profile
@@ -15,9 +15,10 @@ source activate
 python print_hello.py
 
 echo STARTING TRAINING
+echo $CUDA_VISIBLE_DEVICES
 
 # Run the script 
-CUDA_VISIBLE_DEVICES=1,2 python -m torch.distributed.launch --nproc_per_node=2 --master_port=12231 --use_env run_train.py \
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --master_port=12231 --use_env run_train.py \
 --diff_steps 2000 \
 --lr 0.0001 \
 --learning_steps 20000 \
@@ -25,10 +26,10 @@ CUDA_VISIBLE_DEVICES=1,2 python -m torch.distributed.launch --nproc_per_node=2 -
 --seed 102 \
 --noise_schedule sqrt \
 --hidden_dim 128 \
---bsz 425 \
---microbatch 425 \
+--bsz 300 \
+--microbatch 300 \
 --dataset EnglishSlang \
---data_dir ../datasets/EnglishSlang \
+--data_dir ./datasets/EnglishSlang \
 --learned_mean_embed True \
 --denoise True \
 --vocab bert \

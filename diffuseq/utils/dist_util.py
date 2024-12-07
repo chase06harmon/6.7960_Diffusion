@@ -49,7 +49,7 @@ def dev():
     Get the device to use for torch.distributed.
     """
     if th.cuda.is_available():
-        return th.device(f"cuda:0") # supercloud change...
+        return th.device(f"cuda:{os.environ['LOCAL_RANK']}") # supercloud change...
     return th.device("cpu")
 
 

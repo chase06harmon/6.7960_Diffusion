@@ -17,7 +17,7 @@ class myTokenizer():
     ################################################
     def __init__(self, args):
         if args.vocab == 'bert':
-            tokenizer = AutoTokenizer.from_pretrained(args.config_name)
+            tokenizer = AutoTokenizer.from_pretrained("./tokenizers/bert-base-uncased")
             self.tokenizer = tokenizer
             self.sep_token_id = tokenizer.sep_token_id
             self.pad_token_id = tokenizer.pad_token_id

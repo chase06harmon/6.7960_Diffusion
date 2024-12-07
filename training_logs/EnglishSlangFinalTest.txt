@@ -1,0 +1,71 @@
+starting import
+1.24.1
+succesfully imported
+STARTING TRAINING
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06 --dataset EnglishSlang --data_dir ../datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 425 --microbatch 425 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+ OPENAI_LOGDIR=diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06  TOKENIZERS_PARALLELISM=false python train.py   --checkpoint_path diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06 --dataset EnglishSlang --data_dir ../datasets/EnglishSlang --data_split_num 0 --vocab bert --use_plm_init no --lr 0.0001 --use_fp16 True --batch_size 425 --microbatch 425 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 20000 --save_interval 5000 --config_name bert-base-uncased --notes learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06 --learned_mean_embed True --denoise True --denoise_rate 0.5 --reg_rate 0.0  
+2024-12-06 21:26:13.891055: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 21:26:13.891061: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 21:26:15.077848: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 21:26:15.077853: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 21:26:19.583765: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 21:26:19.583768: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 21:26:19.584097: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 21:26:19.584139: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/pkg/nccl/nccl-2.11.4-cuda11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/lib64:/usr/local/pkg/cuda/cuda-11.6/cuda/lib64
+2024-12-06 21:26:19.584155: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2024-12-06 21:26:19.584188: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+cuda:0
+1
+Logging to diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06
+### Creating data loader...
+cuda:0
+1
+Logging to diffusion_models/diffuseq_EnglishSlang_h128_lr0.0001_t2000_sqrt_lossaware_seed102_learned_mask_fp16_denoise_0.5_reproduce20241206-21:25:06
+### Creating data loader...
+initializing the random embeddings Embedding(30522, 128)
+############################## 
+Loading text data...
+############################## 
+Loading dataset EnglishSlang from ../datasets/EnglishSlang...
+### Loading form the TRAIN set...
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 117, in <module>
+    main()
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 44, in main
+    data = load_data_text(
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/text_datasets.py", line 45, in load_data_text
+    training_data = get_corpus(data_args, seq_len, split=split, loaded_vocab=loaded_vocab)
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/text_datasets.py", line 238, in get_corpus
+    with open(path, 'r') as f_reader:
+FileNotFoundError: [Errno 2] No such file or directory: '../datasets/EnglishSlang/train.jsonl'
+reload the random embeddings Embedding(30522, 128)
+############################## 
+Loading text data...
+############################## 
+Loading dataset EnglishSlang from ../datasets/EnglishSlang...
+### Loading form the TRAIN set...
+Traceback (most recent call last):
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 117, in <module>
+    main()
+  File "/home/gridsan/charmon/DiffuSeq/train.py", line 44, in main
+    data = load_data_text(
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/text_datasets.py", line 45, in load_data_text
+    training_data = get_corpus(data_args, seq_len, split=split, loaded_vocab=loaded_vocab)
+  File "/home/gridsan/charmon/DiffuSeq/diffuseq/text_datasets.py", line 238, in get_corpus
+    with open(path, 'r') as f_reader:
+FileNotFoundError: [Errno 2] No such file or directory: '../datasets/EnglishSlang/train.jsonl'
