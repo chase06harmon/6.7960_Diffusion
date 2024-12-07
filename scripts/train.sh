@@ -18,4 +18,3 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 -
 --denoise_rate 0.5 \
 --schedule_sampler lossaware \
 --notes learned_mask_fp16_denoise_0.5_reproduce \
---log_interval 100
