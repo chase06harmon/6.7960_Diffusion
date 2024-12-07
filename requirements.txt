@@ -13,3 +13,4 @@ tqdm
 transformers==4.47.0
 wandb
 datasets
+numpy==1.24.1
