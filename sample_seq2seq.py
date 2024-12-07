@@ -63,9 +63,9 @@ def main():
     model, diffusion = create_model_and_diffusion(
         **args_to_dict(args, load_defaults_config().keys())
     )
-
+    
+    print(args.model_path)
     model.load_state_dict(
-        print(args.model_path)
         dist_util.load_state_dict(args.model_path, False, "model", map_location="cpu")
     )
 
